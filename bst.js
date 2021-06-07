@@ -18,8 +18,8 @@ function BST() {
    this.inOrder = inOrder;
 }
 
-function insert(data) {
-   var n = new Node(data, null, null);
+function insert(data.size) {
+   var n = new Node(data.size, null, null);
    if (this.root == null) {
       this.root = n;
    }
@@ -28,7 +28,7 @@ function insert(data) {
       var parent;
       while (true) {
          parent = current;
-         if (data < current.data) {
+         if (data.size < current.data.size) {
             current = current.left;
             if (current == null) {
                parent.left = n;
