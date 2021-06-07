@@ -88,12 +88,38 @@ describe('Brick', function() {
       tree.insert(brick3);
       tree.insert(brick4);
       tree.insert(brick5);
-      assert.equal(tree.root.data, brick0);
+      assert.equal(tree.root.data, brick0); //root
       assert.equal(tree.root.data.size, 6);
-      assert.equal(tree.root.left.data, brick4);
-      assert.equal(tree.root.left.data.size, 1);
-      assert.equal(tree.root.right.data, brick1);
+      assert.equal(tree.root.left.data, brick2); //root->left
+      assert.equal(tree.root.left.data.size, 3);
+      assert.equal(tree.root.right.data, brick1); //root->right
       assert.equal(tree.root.right.data.size, 8);
+      assert.equal(tree.root.left.left.data, brick4); //root->left->left
+      assert.equal(tree.root.left.left.data.size, 1);
+      assert.equal(tree.root.left.left.right.data, brick5); //root->left->right->left
+      assert.equal(tree.root.left.left.right.data.size, 2);
+      assert.equal(tree.root.left.right.data, brick3); //root->left->right
+      assert.equal(tree.root.left.right.data.size, 4);
     });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   });
 });
