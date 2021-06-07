@@ -13,5 +13,6 @@ function LegoPile() {
 
 function insert(Brick) {
   var bst = dictionary[Brick.color];
+  this.dictionary[Brick.color] = bst;
   bst.insert(Brick);
 }
