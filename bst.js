@@ -19,7 +19,7 @@ function BST() {
 }
 
 function insert(data) {
-   var n = new Node(data.size, null, null);
+   var n = new Node(data, null, null);
    if (this.root == null) {
       this.root = n;
    }
@@ -49,7 +49,7 @@ function insert(data) {
 function inOrder(node) {
    if (!(node == null)) {
       inOrder(node.left);
-      putstr(node.show() + " ");
+      console.log(node.show() + " ");
       inOrder(node.right);
    }
 }

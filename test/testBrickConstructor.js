@@ -4,7 +4,7 @@ const Brick = lego.Brick;
 
 describe('Brick', function() {
   it('should create a lego brick of size and color equal to value passed', function() {
-    let myBrick = new Brick(2, 'blue');
+    var myBrick = new Brick(2, 'blue');
     assert.equal(myBrick.size, 2);
     assert.equal(myBrick.color, 'blue');
   });
