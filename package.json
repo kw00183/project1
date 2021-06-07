@@ -10,5 +10,16 @@
     "test": "mocha"
   },
   "author": "Kim Weible",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kw00183/project1.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kw00183/project1/issues"
+  },
+  "homepage": "https://github.com/kw00183/project1#readme",
+  "devDependencies": {
+    "mocha": "^8.4.0"
+  }
 }
