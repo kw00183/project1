@@ -3,17 +3,19 @@ var lego = require('../legos');
 var bst = require('../bst');
 
 const Brick = lego.Brick;
+const LegoPile = lego.LegoPile;
 const BST = bst.BST;
 
 /* insert one brick */
 describe('Brick', function() {
-  describe('BST#insert()', function() {
-    it('add a single lego brick to the BST and create the root node', function() {
+  describe('LegoPile#insert()', function() {
+    it('add a single brick to the pile', function() {
       var brick0 = new Brick(6, 'red');
-      var tree = new BST();
-      tree.insert(brick0);
-      assert.equal(tree.root.data, brick0);
-      assert.equal(tree.root.data.size, 6);
+      var pile = new LegoPile();
+      pile.insert(brick0);
+
+      var redBST = pile.dictionary['red'].root.data;
+      assert.equal(redBST, brick0);
     });
   });
 });
