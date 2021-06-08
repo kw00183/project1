@@ -19,11 +19,34 @@ function LegoPile() {
   this.dictionary['white'] = new BST();
   this.insert = insert;
   this.showAll = showAll;
+  this.hasBrick = hasBrick;
 }
 
 function insert(Brick) {
   var bst = this.dictionary[Brick.color];
   bst.insert(Brick);
+}
+
+function hasBrick(size, color) {
+  var current = this.dictionary[color].root;
+
+  if (current == null) {
+    return false;
+  }
+
+  while (current.data.size != size) {
+    if (size < current.data.size) {
+      current = current.left;
+    } else if (size > current.data.size) {
+      current = current.right;
+    } else if (size == current.data.size) {
+      return true;
+    }
+    if (current == null) {
+      return false;
+    }
+  }
+  return true;
 }
 
 function showAll() {
