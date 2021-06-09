@@ -20,11 +20,28 @@ function LegoPile() {
   this.insert = insert;
   this.showAll = showAll;
   this.hasBrick = hasBrick;
+  this.count = count;
+}
+
+function count() {
+  var totalBrickCount = 0;
+  Object.keys(this.dictionary).forEach((key) => {
+    var bst = this.dictionary[key];
+    totalBrickCount += bst.count();
+  });
+  return totalBrickCount;
 }
 
 function insert(Brick) {
+  if (Brick.color == 'red' 
+	|| Brick.color == 'blue'
+	|| Brick.color == 'green'
+	|| Brick.color == 'yellow'
+	|| Brick.color == 'black'
+	|| Brick.color == 'white') {
   var bst = this.dictionary[Brick.color];
   bst.insert(Brick);
+}
 }
 
 function hasBrick(size, color) {

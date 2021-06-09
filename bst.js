@@ -15,7 +15,8 @@ function show() {
 function BST() {
    this.root = null;
    this.insert = insert;
-   this.inOrder = inOrder;
+   this.count = count;
+   this.countSubtree = countSubtree;
 }
 
 function insert(data) {
@@ -44,6 +45,17 @@ function insert(data) {
          }
       }
    }
+}
+
+function count() {
+  return this.countSubtree(this.root)
+}
+
+function countSubtree(node) {
+   if (node == null) {
+      return 0;
+   }
+   return 1 + countSubtree(node.left) + countSubtree(node.right);
 }
 
 function inOrder(node) {
