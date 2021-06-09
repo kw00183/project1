@@ -20,25 +20,32 @@ function BST() {
 }
 
 function insert(data) {
-	var n = new Node(data, null, null);
-	if (this.root == null) {
-		this.root = n;
-	} else {
-		var current = this.root;
-		var parent;
-		while (true) {
-			parent = current;
-			if (data.size < current.data.size) {
-				current = current.left;
-				if (current == null) {
-					parent.left = n;
-					break;
-				}
-			} else {
-				current = current.right;
-				if (current == null) {
-					parent.right = n;
-					break;
+	if (data.color == 'red' 
+	|| data.color == 'blue'
+	|| data.color == 'green'
+	|| data.color == 'yellow'
+	|| data.color == 'black'
+	|| data.color == 'white') {
+		var n = new Node(data, null, null);
+		if (this.root == null) {
+			this.root = n;
+		} else {
+			var current = this.root;
+			var parent;
+			while (true) {
+				parent = current;
+				if (data.size < current.data.size) {
+					current = current.left;
+					if (current == null) {
+						parent.left = n;
+						break;
+					}
+				} else {
+					current = current.right;
+					if (current == null) {
+						parent.right = n;
+						break;
+					}
 				}
 			}
 		}
