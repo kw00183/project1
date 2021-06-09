@@ -22,7 +22,7 @@ describe('Brick', function() {
 			var brick9 = new Brick(1, 'blue');
 			var brick10 = new Brick(8, 'white');
 			var brick11 = new Brick(12, 'red');
-			var brick12 = new Brick(12, 'purple');
+			var brick12 = new Brick(12, 'purple'); //invalid brick used to check
 			var brick13 = new Brick(12, 'white');
 			var brick14 = new Brick(12, 'red');
 
